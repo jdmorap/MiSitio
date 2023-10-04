@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mi Sitio Web - Noticias</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .navbar {
+            background-color: #58B2AF;
+        }
+        .jumbotron {
+            background-color: #58B2AF;
+            color: #ffffff;
+            padding: 80px 0;
+        }
+        .carousel-inner img {
+            object-fit: cover;
+            height: 400px;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            color: #58B2AF;
+        }
+        .carousel-indicators li {
+            border: 1px solid #58B2AF;
+            background-color: #ffffff;
+        }
+        .news-text {
+            background-color: rgba(88, 178, 175, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            color: #000000; /* Cambiado a color negro */
+        }
+        .modal-content {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">Inicio</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="equipo.html">Equipo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="noticias.html">Noticias</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Últimas Noticias</h1>
+    </div>
+
+    <div class="container">
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExample" data-slide-to="1"></li>
+                <li data-target="#carouselExample" data-slide-to="2"></li>
+                <li data-target="#carouselExample" data-slide-to="3"></li>
+                <li data-target="#carouselExample" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/noticia1.jpg" alt="Noticia 1" class="d-block w-100">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Noticia 1</h3>
+                        <p class="news-text">Texto de la noticia 1 <a href="#" data-toggle="modal" data-target="#modal1">Ver más</a></p>
+                    </div>
+                </div>
+                <!-- Repite este bloque de código para las noticias 2 al 5 -->
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Modales -->
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal1Label">Noticia 1 - Detalles</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Detalles de la Noticia 1.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Repite este bloque de código para los modales 2 al 5 -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
